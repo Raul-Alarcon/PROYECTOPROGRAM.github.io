@@ -1,0 +1,202 @@
+body{
+  background-color: #c0bdbd;
+  margin: 0;
+  padding: 0;
+  background-color: #c0bdbd;
+  font-family: 'Baloo 2', cursiva;
+}
+/*establece estilos para un menú, eliminando viñetas, estableciendo un fondo rosa, ajustando el ancho y el centrado
+horizontal, y utilizando el modelo flexbox para distribuir uniformemente los elementos con espacios iguales entre ellos.*/
+.menu{
+  list-style: none;
+  padding: 0;
+  background: #F789AE;
+  width: 100%;
+  max-width: auto;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+/*agrega estilos a los enlaces dentro de los elementos de lista en el menú, eliminando la decoración de subrayado, 
+estableciendo el color del texto en negro, añadiendo un espacio de relleno alrededor del enlace y configurando su visualización como elementos 
+de bloque.*/
+.menu li a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  display: block;
+}
+/*establece los estilos para los elementos de lista en el menú, haciendo que se muestren en línea y 
+permitiendo que tengan un ancho específico. Además, centra el contenido dentro de los elementos de lista horizontalmente.*/
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+/* agrega un estilo que cambia el color de fondo de los enlaces a blanco cuando se pasa el cursor sobre ellos. 
+Esto proporciona un efecto visual destacado cuando se interactúa con los enlaces en el menú.*/
+.menu li a:hover{
+  background-color:white ;
+}
+/*estilos para galeria*/
+.gallery {
+    position: relative;
+    width: 90%;
+    margin: 30px auto 30px;
+    padding: 85px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    background: #F3F0F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+  }
+
+  .gallery h1 {
+    position: absolute;
+    top: 0;
+    padding: 10px;
+    background-color: #83B884;
+    color: #fff;
+    margin: 0;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .image {
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .image img {
+    margin-top: 10px;
+    width: 100%;
+    height: 230px;
+    display: block;
+  }
+  
+  .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #83B884;
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .image:hover .description {
+    opacity: 1;
+  }  
+
+  @media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 20px;
+    padding-top: 80px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    padding: 10px;
+    gap: 10px;
+    padding-top: 80px;
+  }
+  
+  .image img {
+    height: 150px;
+  }
+}
+
+.footer{
+  background-color: #897CB3;
+  padding: 30px 0;
+  
+}
+/*configura el estilo de un contenedor con la clase .footer-row, convirtiéndolo en un contenedor flexible con elementos que pueden envolverse en múltiples
+líneas. Los elementos se distribuyen equitativamente con espacios iguales alrededor de ellos, y el contenedor ocupa el ancho completo disponible sin un 
+ancho máximo específico. Además, se elimina cualquier margen adicional alrededor del contenedor*/
+.footer-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  max-width: auto;
+  margin: 0;
+}
+/* configura el ancho de los elementos con la clase .footer-links al 30% del ancho del contenedor que los contiene. Esto significa que los elementos ocuparán
+el 30% del ancho disponible dentro de su contenedor.*/
+.footer-links{
+  width: 30%;
+}
+/*configura el estilo de los elementos <h4> dentro de los elementos con la clase .footer-links. Establece propiedades como tamaño de fuente, color de texto, 
+margen, relleno y grosor de la fuente. También agrega un borde inferior para crear una línea debajo de los elementos <h4>.*/
+.footer-links h4{
+  font-size: 20px;
+  color:#ffffff;
+  margin-bottom: 25px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-weight: 500;
+  border-bottom: 3px solid #00c3ff;
+}
+/*configura el estilo de los elementos <a> dentro de las listas <ul> dentro de los elementos con la clase .footer-links. Establece propiedades como tamaño
+de fuente, color de texto, decoración de texto, margen y transiciones suaves para crear un diseño visualmente agradable y con animaciones fluidas.*/
+.footer-links ul a{
+  font-size: 18px;
+  text-decoration: none;
+  color:white;
+  display: block;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+/*configura el estilo de los elementos <a> dentro de las listas <ul> dentro de los elementos con la clase .footer-links cuando se activa
+el evento hover. Cambia el color de texto a blanco y agrega un relleno en el lado izquierdo para resaltar visualmente los enlaces cuando 
+se pasa el cursor sobre ellos.*/
+.footer-links ul a:hover{
+  color: white;
+  padding-left: 6px;
+}
+/*configura el estilo de los elementos <a> dentro de los elementos con la clase .social-links. Establece propiedades 
+como la visualización en línea, altura mínima, ancho, color de fondo, márgenes, alineación del texto, altura de línea, 
+radio de borde y transiciones suaves. Esto crea un diseño visualmente agradable para los enlaces sociales con animaciones 
+fluidas al interactuar con ellos*/
+.social-links a{
+  display: inline-block;
+  min-height: 48px;
+  width: 40px;
+  background-color: rgb(255, 225, 225, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 30%;
+  color: white;
+  transition: all .5s ease;
+}
+/*este código CSS configura el estilo de los elementos <a> dentro de los elementos con la clase 
+.social-links cuando se activa el evento hover. Cambia el color de fondo a #D497D3 para resaltar visualmente
+los enlaces sociales cuando se pasa el cursor sobre ellos.*/
+.social-links a:hover{
+  background-color: #D497D3;
+}
+/*utiliza una regla de medios para aplicar estilos específicos cuando la pantalla tiene un ancho de 991 píxeles o menos.
+Alinea el texto en el centro dentro de los elementos .footer-row y establece el ancho al 100% con un margen inferior en los 
+elementos .footer-links. Esto ayuda a adaptar el diseño del pie de página para pantallas más pequeñas y mejora la experiencia de 
+visualización en dispositivos móviles o tabletas*/
+@media(max-width:991px){
+  .footer-row{
+      text-align: center;
+  }
+  .footer-links{
+      width: 100%;
+      margin-bottom: 30px;
+  }
+}
